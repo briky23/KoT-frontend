@@ -6,6 +6,11 @@ html, body{
   width: 1290px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @font-face {
   font-family: Alliance;
   src: url(/assets/fonts/Alliance/ufonts.com_alliance.ttf);
