@@ -17,6 +17,7 @@ import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { TablesComponent } from './+tables';
+import { SingleTableComponent } from './+single-table';
 import { NoContentComponent } from './no-content';
 import { SharedModule } from './shared/shared.module';
 import { UserFormComponent } from './login/user/user_form.component';
@@ -45,6 +46,7 @@ type StoreType = {
     NoContentComponent,
     TablesComponent,
     UserFormComponent,
+    SingleTableComponent,
   ],
   imports: [ // import Angular's modules
     BrowserModule,
