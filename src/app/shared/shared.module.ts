@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { HeaderComponent }   from './header/header.component';
 import { FooterComponent }   from './footer/footer.component';
@@ -9,7 +10,7 @@ import { InstancePhotoComponent }   from './instance-photo/instance_photo.compon
 import { TableViewComponent }   from './table-view/table_view.component';
 
 @NgModule({
-    imports: [RouterModule],
+    imports: [RouterModule, CommonModule],
     exports: [HeaderComponent, FooterComponent, HeroimageComponent, TableGlobalComponent, InstancePhotoComponent, TableViewComponent], 
     declarations: [HeaderComponent, FooterComponent, HeroimageComponent, TableGlobalComponent, InstancePhotoComponent, TableViewComponent],
     providers: []

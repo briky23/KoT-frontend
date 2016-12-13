@@ -1,36 +1,17 @@
 <div class="table-view">
     <div class="col1">
         <div class="user-code">
-            your in-app code<span>12345678</span>
+            your in-app code<span>{{gameTable.pair_code}}</span>
         </div>
     </div>
-    <div class="col2">
-        <div class="team1">
+    <div class="col" *ngFor="let gameSession of gameTable.game_sessions">
+        <div class="team" [class.winner]="gameSession.id == gameTable.winner_id">
             <img src="/assets/img/crown-ico.png" alt="crown icon">
-            <h1 class="teams">team 1</h1>
+            <h1 class="teams">{{gameSession.name}}</h1>
         </div>
         <div class="team-list">
             <ul>
-                <li>User 1</li>
-                <li>User 2</li>
-                <li>User 3</li>
-                <li>User 4</li>
-                <li>User 5</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col3">
-        <div class="team2">
-            <img src="/assets/img/crown-ico.png" alt="crown icon">
-            <h1 class="teams">team 2</h1>
-        </div>
-        <div class="team-list">
-            <ul>
-                <li>User 1</li>
-                <li>User 2</li>
-                <li>User 3</li>
-                <li>User 4</li>
-                <li>User 5</li>
+                <li *ngFor="let player of gameSession.members">{{player.name}}</li>
             </ul>
         </div>
     </div>
@@ -39,30 +20,13 @@
 <div class="timer">
     <div class="boss-name">
             <ul>
-                <li>Boss 1</li>
-                <li>Boss 2</li>
-                <li>Boss 3</li>
-                <li>Boss 4</li>
-                <li>Boss 5</li>
+                <li *ngFor="let boss of gameTable.bosses">{{boss.name}}</li>
             </ul>
         </div>
-    <div class="boss-time">
+    <div class="boss-time" *ngFor="let gameSession of gameTable.game_sessions">
             <ul>
-                <li>Time</li>
-                <li>Time</li>
-                <li>Time</li>
-                <li>Time</li>
-                <li>Time</li>
+                <li *ngFor="let bossKill of gameSession.boss_kills">{{ bossKill.end_time | date:'mm:HH dd/mm/yyyy' }}</li>
             </ul>
-        </div>
-    <div class="boss-time">
-        <ul>
-        <li>Time</li>
-        <li>Time</li>
-        <li>Time</li>
-        <li>Time</li>
-        <li>Time</li>
-        </ul>
         </div>
 </div>
 
