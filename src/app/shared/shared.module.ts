@@ -4,11 +4,14 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent }   from './header/header.component';
 import { FooterComponent }   from './footer/footer.component';
 import { HeroimageComponent }   from './heroimage/heroimage.component';
+import { TableGlobalComponent }   from './table-global/table_global.component';
+import { InstancePhotoComponent }   from './instance-photo/instance_photo.component';
+import { TableViewComponent }   from './table-view/table_view.component';
 
 @NgModule({
     imports: [RouterModule],
-    exports: [HeaderComponent, FooterComponent, HeroimageComponent], 
-    declarations: [HeaderComponent, FooterComponent, HeroimageComponent],
+    exports: [HeaderComponent, FooterComponent, HeroimageComponent, TableGlobalComponent, InstancePhotoComponent, TableViewComponent], 
+    declarations: [HeaderComponent, FooterComponent, HeroimageComponent, TableGlobalComponent, InstancePhotoComponent, TableViewComponent],
     providers: []
 })
 export class SharedModule { }

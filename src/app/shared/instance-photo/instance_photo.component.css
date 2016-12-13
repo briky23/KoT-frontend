@@ -1,0 +1,15 @@
+.instance-photo {
+    background: #2865a2 url(/assets/img/karazhan-tableview.png) no-repeat;
+    height: 550px;
+    width: 100%;
+    display: table;
+}
+
+.instance-name {
+    text-transform: uppercase;
+    color: #ffc600;
+    font-family: Alliance, sans-serif;
+    font-size: 120px;
+    text-align: center;
+    margin-top: 200px;
+}
