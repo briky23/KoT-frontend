@@ -10,7 +10,7 @@ export class TableViewComponent implements OnInit {
     gameTable: any = {
         id: 1,
         pair_code: '1223112',
-        winner_id: 1,
+        winner_id: 2,
         zone: {
             id: 1,
             name: 'Kazahstan'
@@ -25,6 +25,7 @@ export class TableViewComponent implements OnInit {
         game_sessions: [{
             id: 1,
             name: 'Team 1',
+            complete_time: '01:13:42',
             boss_kills: [{
                 id: 1,
                 boss_id: 1,
@@ -52,6 +53,7 @@ export class TableViewComponent implements OnInit {
         }, {
             id: 2,
             name: 'Team 2',
+            complete_time: '00:03:32',
             boss_kills: [{
                 id: 3,
                 boss_id: 1,

@@ -31,13 +31,13 @@
 </div>
 
 <div class="yellow">
-    <div class="winner-announced">
+    <div class="winner-announced" *ngIf="gameTable.winner_id == '1'">
         winner: TEAM 1
     </div>
-    <div class="time-sum">
-        13:01
+    <div class="winner-announced" *ngIf="gameTable.winner_id == '2'">
+        winner: TEAM 2
     </div>
-    <div class="time-sum">
-        13:02
+    <div class="time-sum" *ngFor="let time of gameTable.game_sessions">
+        {{time.complete_time}}
     </div>
 </div>
