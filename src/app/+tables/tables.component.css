@@ -1,8 +1,11 @@
 /** CREATE GAME BUTTON **/
+.btn-wrap {
+    width: 1284px;
+}
 
 .btn {
     display: block;
-    margin: 100px auto 50px auto;
+    margin: 0 auto 0 auto;
     width: 276px;
     height: 76px;
     background: #2865a2;
@@ -12,6 +15,8 @@
     color: #ffc600;
     text-transform: uppercase;
     line-height: 70px;
+    position: relative;
+    top: -350px;
 }
 
 .btn a {
