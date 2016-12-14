@@ -15,4 +15,7 @@ import { TableViewComponent }   from './table-view/table_view.component';
     declarations: [HeaderComponent, FooterComponent, HeroimageComponent, TableGlobalComponent, InstancePhotoComponent, TableViewComponent],
     providers: []
 })
-export class SharedModule { }
+export class SharedModule { 
+
+
+}
