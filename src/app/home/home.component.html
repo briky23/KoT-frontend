@@ -5,19 +5,21 @@
     <div class="box login">
       <p>1. Login to our platform using your in-game nickname.</p>
       <div class="button-wrapper">
-        <button class="btn" type="button"><a href="/#/login">login</a></button>
+        <button class="btn" type="button"><a [routerLink]=" ['./login']">login</a></button>
       </div>
     </div>
     <div class="box download">
       <p>2. Download our APP via link provided below</p>
       <div class="button-wrapper">
-        <button class="btn" type="button"><a href="#">download</a></button>
+        <button class="btn" type="button">
+          <a href="/assets/img/crown-ico.png" download="kutas">download</a>
+        </button>
       </div>
     </div>
     <div class="box create">
       <p>3. Create a game to compete with players from all around the world.</p>
       <div class="button-wrapper">
-        <button class="btn" type="button"><a href="/#/tables">create</a></button>
+        <button class="btn" type="button"><a [routerLink]=" ['./tables']">create</a></button>
       </div>
     </div>
   </div>
