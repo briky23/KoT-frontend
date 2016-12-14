@@ -5,7 +5,7 @@
         <div class="player" *ngFor="let gameSession of gameTable.game_sessions" [class.winner]="gameSession.id == gameTable.winner_id">
          <p class="winner">{{ gameSession.members[0].name }}</p>
          <img src="/assets/img/crown-ico.png" alt="crown image">
-         <p class="time">time:<span>13:11</span></p>
+         <p class="time">time:<span>{{getLastBossKillTime(gameSession.start_time, gameSession.boss_kills)}}</span></p>
         </div>
     </div>
 </div>
