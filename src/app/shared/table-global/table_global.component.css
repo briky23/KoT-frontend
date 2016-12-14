@@ -66,4 +66,9 @@
 
 .player img {
     width: 40px;
+    display: none;
+}
+
+.player.winner img {
+    display: inline-block;
 }

@@ -25,7 +25,7 @@
         </div>
     <div class="boss-time" *ngFor="let gameSession of gameTable.game_sessions">
             <ul>
-                <li *ngFor="let bossKill of gameSession.boss_kills">{{ bossKill.end_time | date:'mm:HH dd/mm/yyyy' }}</li>
+                <li *ngFor="let bossKill of gameSession.boss_kills">{{ formatTime(gameSession.start_time, bossKill.kill_time) }}</li>
             </ul>
         </div>
 </div>
@@ -37,7 +37,7 @@
     <div class="winner-announced" *ngIf="gameTable.winner_id == '2'">
         winner: TEAM 2
     </div>
-    <div class="time-sum" *ngFor="let time of gameTable.game_sessions">
-        {{time.complete_time}}
+    <div class="time-sum" *ngFor="let gameSession of gameTable.game_sessions">
+        {{getLastBossKillTime(gameSession.start_time, gameSession.boss_kills)}}
     </div>
 </div>

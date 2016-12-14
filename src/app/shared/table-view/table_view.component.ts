@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as moment from 'moment';
+
+console.log(moment());
+
 @Component({
     selector: 'table-view',
     templateUrl: './table_view.component.html',
     styleUrls: ['./table_view.component.css']
 })
 export class TableViewComponent implements OnInit {
+    duration: moment.Duration;
 
     gameTable: any = {
         id: 1,
@@ -25,17 +30,15 @@ export class TableViewComponent implements OnInit {
         game_sessions: [{
             id: 1,
             name: 'Team 1',
-            complete_time: '01:13:42',
+            start_time: moment(),
             boss_kills: [{
                 id: 1,
                 boss_id: 1,
-                start_time: new Date(),
-                end_time: new Date()
+                kill_time: moment().add(12, 'minutes')
             }, {
                 id: 2,
                 boss_id: 2,
-                start_time: new Date(),
-                end_time: new Date()
+                kill_time: moment().add(23, 'minutes')
             }],
             members: [{
                 id: 1,
@@ -53,17 +56,15 @@ export class TableViewComponent implements OnInit {
         }, {
             id: 2,
             name: 'Team 2',
-            complete_time: '00:03:32',
+            start_time: moment(),
             boss_kills: [{
                 id: 3,
                 boss_id: 1,
-                start_time: new Date(),
-                end_time: new Date()
+                kill_time: moment().add(11, 'minutes')
             }, {
                 id: 4,
                 boss_id: 2,
-                start_time: new Date(),
-                end_time: new Date()
+                kill_time: moment().add(25, 'minutes')
             }],
             members: [{
                 id: 5,
@@ -84,4 +85,27 @@ export class TableViewComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
+
+    getLastBossKillTime(startTime:Date, bossKills:Array<any>){
+        let lastKill = bossKills[bossKills.length-1];
+
+        return this.formatTime(startTime, lastKill.kill_time)
+    }
+
+    formatTime(startTime:Date, endTime:Date){
+        let mStartTime = moment(startTime);
+        let mEndTime = moment(endTime);
+        let mDuration = moment.duration(mEndTime.diff(mStartTime));
+
+        let hours = this.prependZero(Math.floor(mDuration.asHours()));
+        let minutes = this.prependZero(Math.floor(mDuration.minutes()));
+        let seconds = this.prependZero(Math.floor(mDuration.seconds()));
+        let dateString = `${hours}:${minutes}:${seconds}`;
+
+        return dateString; 
+    }
+
+    prependZero(value: number) {
+        return ("0" + value).slice(-2);
+    }
 }

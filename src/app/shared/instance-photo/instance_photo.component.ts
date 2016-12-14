@@ -25,17 +25,15 @@ export class InstancePhotoComponent implements OnInit {
         game_sessions: [{
             id: 1,
             name: 'Team 1',
-            complete_time: '01:13:42',
+            start_time: '01:13:42',
             boss_kills: [{
                 id: 1,
                 boss_id: 1,
-                start_time: new Date(),
-                end_time: new Date()
+                boss_kill: new Date()
             }, {
                 id: 2,
                 boss_id: 2,
-                start_time: new Date(),
-                end_time: new Date()
+                boss_kill: new Date()
             }],
             members: [{
                 id: 1,
@@ -53,17 +51,15 @@ export class InstancePhotoComponent implements OnInit {
         }, {
             id: 2,
             name: 'Team 2',
-            complete_time: '00:03:32',
+            start_time: '00:03:32',
             boss_kills: [{
                 id: 3,
                 boss_id: 1,
-                start_time: new Date(),
-                end_time: new Date()
+                boss_kill: new Date()
             }, {
                 id: 4,
                 boss_id: 2,
-                start_time: new Date(),
-                end_time: new Date()
+                boss_kill: new Date()
             }],
             members: [{
                 id: 5,

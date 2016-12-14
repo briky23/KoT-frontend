@@ -1,17 +1,9 @@
-<a href="/#/single-table">
+<a [routerLink]="['/single-table']">
     <div class="container">
-    <p class="status">status: live</p>
-    <h1 class="instance">karazhan</h1>
+    <h1 class="instance">{{gameTable.zone.name}}</h1>
     <div class="results">
-        <div class="player">
-         <p>player 1</p>
-         <p class="time">time:<span>13:12</span></p>
-        </div>
-        <div class="versus">           
-             <h2>versus</h2>
-        </div>
-        <div class="player">
-         <p class="winner">player 2</p>
+        <div class="player" *ngFor="let gameSession of gameTable.game_sessions" [class.winner]="gameSession.id == gameTable.winner_id">
+         <p class="winner">{{ gameSession.members[0].name }}</p>
          <img src="/assets/img/crown-ico.png" alt="crown image">
          <p class="time">time:<span>13:11</span></p>
         </div>
