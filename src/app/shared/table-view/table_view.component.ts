@@ -14,11 +14,9 @@ export class TableViewComponent implements OnInit {
 
     gameTable: any = {
         id: 1,
-        pair_code: '1223112',
-        winner_id: 2,
         zone: {
             id: 1,
-            name: 'Kazahstan'
+            name: 'Deadmines'
         },
         bosses: [{
             id: 1,
@@ -30,18 +28,19 @@ export class TableViewComponent implements OnInit {
         game_sessions: [{
             id: 1,
             name: 'Team 1',
-            start_time: moment(),
-            boss_kills: [{
-                id: 1,
-                boss_id: 1,
-                kill_time: moment().add(12, 'minutes')
-            }, {
-                id: 2,
-                boss_id: 2,
-                kill_time: moment().add(23, 'minutes')
-            }],
+            // start_time: moment(),
+            // boss_kills: [{
+            //     id: 1,
+            //     boss_id: 1,
+            //     kill_time: moment().add(12, 'minutes')
+            // }, {
+            //     id: 2,
+            //     boss_id: 2,
+            //     kill_time: moment().add(23, 'minutes')
+            // }],
             members: [{
                 id: 1,
+                pair_code: '1223112',
                 name: "Janusz"
             }, {
                 id: 2,
@@ -54,31 +53,32 @@ export class TableViewComponent implements OnInit {
                 name: "Andzela"
             }]
         }, {
-            id: 2,
-            name: 'Team 2',
-            start_time: moment(),
-            boss_kills: [{
-                id: 3,
-                boss_id: 1,
-                kill_time: moment().add(11, 'minutes')
-            }, {
-                id: 4,
-                boss_id: 2,
-                kill_time: moment().add(25, 'minutes')
-            }],
-            members: [{
-                id: 5,
-                name: "Brajan"
-            }, {
-                id: 6,
-                name: "Dzesika"
-            }, {
-                id: 7,
-                name: "Samanta"
-            }, {
-                id: 8,
-                name: "Pawel"
-            }]
+            // id: 2,
+            // name: 'Team 2',
+            // start_time: moment(),
+            // boss_kills: [{
+            //     id: 3,
+            //     boss_id: 1,
+            //     kill_time: moment().add(11, 'minutes')
+            // }, {
+            //     id: 4,
+            //     boss_id: 2,
+            //     kill_time: moment().add(25, 'minutes')
+            // }],
+            // members: [{
+            //     id: 5,
+            //     pair_code: '1223112',
+            //     name: "Brajan"
+            // }, {
+            //     id: 6,
+            //     name: "Dzesika"
+            // }, {
+            //     id: 7,
+            //     name: "Samanta"
+            // }, {
+            //     id: 8,
+            //     name: "Pawel"
+            // }]
         }]
     }
 
