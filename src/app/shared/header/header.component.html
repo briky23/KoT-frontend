@@ -3,11 +3,11 @@
         <div class="logo">
               KEEPERS OF TIME
         </div>
-        <div class="menu">
+        <div [ngClass]="{'menu-user': user, 'menu': !user}">
             <a  [routerLink]=" ['./'] ">
                 MAIN
            </a>
-            <a href="/assets/img/crown-ico.png" download="kutas">
+            <a href="/assets/img/crown-ico.png" download="download">
                 DOWNLOAD APP
             </a>
             <a [routerLink]=" ['./tables'] ">

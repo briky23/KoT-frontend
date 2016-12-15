@@ -34,6 +34,8 @@ export class TablesComponent {
 
   createGame() {
     this.tableService.createTable(this.userService.getUser().name, '4')
-      .subscribe();
+      .subscribe(
+        data => this.gameTables = [data]
+      );
   }
 }
