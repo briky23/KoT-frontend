@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../user.service';
+import { UserService } from '../services/user.service';
 
 @Component({
     selector: 'kot-header',
@@ -7,11 +7,13 @@ import {User} from '../user.service';
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-    constructor(private user:User) { 
-        this.user2 = this.user
+    user: any;
+    constructor(private userService: UserService) { 
+        this.userService.user$()
+            .subscribe(
+                (user: any) => this.user = user
+            );
     }
-    user2 = {}
 
     ngOnInit() { }
-    
 }

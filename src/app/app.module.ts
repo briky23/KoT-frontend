@@ -22,7 +22,6 @@ import { SingleTableComponent } from './+single-table';
 import { NoContentComponent } from './no-content';
 import { SharedModule } from './shared/shared.module';
 import { UserFormComponent } from './login/user/user_form.component';
-import { User }   from './shared/user.service';
 
 
 // Application wide providers
@@ -63,7 +62,6 @@ type StoreType = {
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
     APP_PROVIDERS,
-    User
   ]
 })
 export class AppModule {

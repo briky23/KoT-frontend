@@ -14,10 +14,10 @@
                 GAMES
             </a>
             <div class="user">
-                <div class="user-name" *ngIf="user2.getName().length > 0">
-                    {{user2.getName()}}
+                <div class="user-name" *ngIf="user">
+                    {{user.name}}
                 </div>
-                <a [routerLink]=" ['./login']"  *ngIf="user2.getName().length == 0">
+                <a [routerLink]=" ['./login']"  *ngIf="!user">
                     <button> 
                         LOGIN
                     </button>

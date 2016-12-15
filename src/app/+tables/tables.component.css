@@ -41,3 +41,10 @@
 .btn a:active {
     color: #ffc600;
 }
+
+.login-reminder {
+    font-size: 24px;
+    text-align: center;
+    font-family: Montserrat;
+    color: #fff;
+}

@@ -1,6 +1,8 @@
 <hero-image></hero-image>
 <div class="btn-wrap">
-    <button class="btn" type="button" (click)="createGame(user2.getName())">create game</button>
-    {{user2.getName()}}
+    <button class="btn" type="button" (click)="createGame()">create game</button>
 </div>
-<table-global></table-global>
+<div class="login-reminder" *ngIf="!isLoggedIn()">
+    PLEASE LOGIN BEFORE STARTING A GAME
+</div>
+<table-global *ngFor="let gameTable of gameTables" [gameTable]="gameTable"></table-global>

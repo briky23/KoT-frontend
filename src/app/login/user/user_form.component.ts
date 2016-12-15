@@ -1,7 +1,7 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { User }    from '../../shared/user.service'; 
+import { UserService }    from '../../shared/services/user.service'; 
 
 @Component({
   selector: 'user-form',
@@ -13,16 +13,16 @@ export class UserFormComponent {
   form: FormGroup;
   
 
-  constructor(private fb: FormBuilder, private user:User, private router:Router) {
+  constructor(private fb: FormBuilder,
+              private userService: UserService, 
+              private router: Router) {
     this.form = fb.group({
       'name': ['', Validators.required]
     });
   }
 
   onSubmit(form) { 
-    console.log("SUBMT");
-    this.user.setName(form.value.name)
-    console.log(this.user.getName());
+    this.userService.setUser(form.value.name)
     this.router.navigate(['tables']); 
   }
 }
