@@ -26,6 +26,10 @@ div.menu {
   float: right;
 }
 
+.user {
+    display: inline-block;
+}
+
 a {
     color: #fff;
     margin-right: 21px;

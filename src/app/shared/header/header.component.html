@@ -12,12 +12,17 @@
             </a>
             <a [routerLink]=" ['./tables'] ">
                 GAMES
-            </a> 
-            <a [routerLink]=" ['./login'] ">
-                <button> 
-                    LOGIN
-                </button>
             </a>
+            <div class="user">
+                <div class="user-name" *ngIf="user2.getName().length > 0">
+                    {{user2.getName()}}
+                </div>
+                <a [routerLink]=" ['./login']"  *ngIf="user2.getName().length == 0">
+                    <button> 
+                        LOGIN
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </div>
