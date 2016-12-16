@@ -13,6 +13,6 @@ export const ROUTES: Routes = [
   { path: 'home',  component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tables', component: TablesComponent,},
-  { path: 'single-table', component: SingleTableComponent,},
+  { path: 'single-table/:id', component: SingleTableComponent,},
   { path: '**',    component: NoContentComponent },
 ];

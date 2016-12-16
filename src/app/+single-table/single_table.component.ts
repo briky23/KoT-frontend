@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { TableService } from '../shared/services/table.service';
+import { ActivatedRoute } from '@angular/router';
 /*
  * We're loading this component asynchronously
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
@@ -21,8 +22,11 @@ console.log('`SingleTableComponent` component loaded asynchronously');
 })
 
 export class SingleTableComponent {
-  constructor() {
-
+  gameTable: any;
+  constructor(private tableService: TableService,
+              private ar: ActivatedRoute) {
+    let id = ar.snapshot.params['id'];
+    this.gameTable = tableService.getTable(id);
   }
 
   ngOnInit() {
