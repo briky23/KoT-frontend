@@ -40,13 +40,28 @@ COLUMN 1
     width: 33%;
 }
 
+.app-status {
+    color: #ffc600;
+    border: 3px solid #ffc600;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    top: 91px;
+}
+
+.app-status span {
+    font-weight: 700;
+}
+
 .user-code {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     line-height: 40px;
     text-transform: uppercase;
-    padding-top: 180px;
+    padding-top: 100px;
 }
 
 .user-code span {

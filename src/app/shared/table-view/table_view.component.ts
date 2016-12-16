@@ -41,6 +41,7 @@ export class TableViewComponent implements OnInit {
             members: [{
                 id: 1,
                 pair_code: '1223112',
+                status: 'paired',
                 name: "Janusz"
             }, {
                 id: 2,
@@ -87,9 +88,9 @@ export class TableViewComponent implements OnInit {
     ngOnInit() { }
 
     getLastBossKillTime(startTime:Date, bossKills:Array<any>){
-        let lastKill = bossKills[bossKills.length-1];
+        // let lastKill = bossKills[bossKills.length-1];
 
-        return this.formatTime(startTime, lastKill.kill_time)
+        // return this.formatTime(startTime, lastKill.kill_time)
     }
 
     formatTime(startTime:Date, endTime:Date){

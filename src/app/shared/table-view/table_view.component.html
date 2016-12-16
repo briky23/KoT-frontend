@@ -1,7 +1,10 @@
 <div class="table-view">
     <div class="col1">
+        <div class="app-status">
+            status: <span>{{gameTable.game_sessions[0].members[0].status}}</span>
+        </div>
         <div class="user-code">
-            your in-app code<span>{{gameTable.pair_code}}</span>
+            your in-app code<span>{{gameTable.game_sessions[0].members[0].pair_code}}</span>
         </div>
     </div>
     <div class="col" *ngFor="let gameSession of gameTable.game_sessions">
