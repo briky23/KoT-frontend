@@ -16,7 +16,8 @@ export class TableViewComponent implements OnInit {
         id: 1,
         zone: {
             id: 1,
-            name: 'Deadmines'
+            name: 'Deadmines',
+            winner_id: '1'
         },
         bosses: [{
             id: 1,
@@ -54,41 +55,43 @@ export class TableViewComponent implements OnInit {
                 name: "Andzela"
             }]
         }, {
-            // id: 2,
-            // name: 'Team 2',
-            // start_time: moment(),
-            // boss_kills: [{
-            //     id: 3,
-            //     boss_id: 1,
-            //     kill_time: moment().add(11, 'minutes')
-            // }, {
-            //     id: 4,
-            //     boss_id: 2,
-            //     kill_time: moment().add(25, 'minutes')
-            // }],
-            // members: [{
-            //     id: 5,
-            //     pair_code: '1223112',
-            //     name: "Brajan"
-            // }, {
-            //     id: 6,
-            //     name: "Dzesika"
-            // }, {
-            //     id: 7,
-            //     name: "Samanta"
-            // }, {
-            //     id: 8,
-            //     name: "Pawel"
-            // }]
+            id: 2,
+            name: 'Team 2',
+            start_time: moment(),
+            boss_kills: [{
+                id: 3,
+                boss_id: 1,
+                kill_time: moment().add(11, 'minutes')
+            }, {
+                id: 4,
+                boss_id: 2,
+                kill_time: moment().add(25, 'minutes')
+            }],
+            members: [{
+                id: 5,
+                pair_code: '1223112',
+                name: "Brajan"
+            }, {
+                id: 6,
+                name: "Dzesika"
+            }, {
+                id: 7,
+                name: "Samanta"
+            }, {
+                id: 8,
+                name: "Pawel"
+            }]
         }]
     }
 
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+        console.log(this.gameTable.game_sessions)
+    }
 
-    getLastBossKillTime(startTime:Date, bossKill:Array<any>){
-        let lastKill = bossKill[bossKill.length-1];
+    getLastBossKillTime(startTime:Date, bossKills:Array<any>){
+        let lastKill = bossKills[bossKills.length-1];
 
         return this.formatTime(startTime, lastKill.kill_time)
     }
